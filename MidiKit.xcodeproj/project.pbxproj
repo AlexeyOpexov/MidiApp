@@ -11,6 +11,10 @@
 		88F968CB29178FBF00552312 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F968CA29178FBF00552312 /* ContentView.swift */; };
 		88F968CD29178FC100552312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F968CC29178FC100552312 /* Assets.xcassets */; };
 		88F968D029178FC100552312 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F968CF29178FC100552312 /* Preview Assets.xcassets */; };
+		88F968DB2917971900552312 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 88F968DA2917971900552312 /* AudioKit */; };
+		88F968DF2917DFCA00552312 /* MIDIConductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F968DE2917DFCA00552312 /* MIDIConductor.swift */; };
+		88F968E12917E0CC00552312 /* InstrumentsEXS+MIDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F968E02917E0CC00552312 /* InstrumentsEXS+MIDI.swift */; };
+		88F968E32917E87700552312 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 88F968E22917E87700552312 /* Sounds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,9 @@
 		88F968CC29178FC100552312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88F968CF29178FC100552312 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		88F968D129178FC100552312 /* MidiKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MidiKit.entitlements; sourceTree = "<group>"; };
+		88F968DE2917DFCA00552312 /* MIDIConductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIConductor.swift; sourceTree = "<group>"; };
+		88F968E02917E0CC00552312 /* InstrumentsEXS+MIDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentsEXS+MIDI.swift"; sourceTree = "<group>"; };
+		88F968E22917E87700552312 /* Sounds */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sounds; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F968DB2917971900552312 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,8 +62,11 @@
 			children = (
 				88F968C829178FBF00552312 /* MidiKitApp.swift */,
 				88F968CA29178FBF00552312 /* ContentView.swift */,
+				88F968DE2917DFCA00552312 /* MIDIConductor.swift */,
+				88F968E02917E0CC00552312 /* InstrumentsEXS+MIDI.swift */,
 				88F968CC29178FC100552312 /* Assets.xcassets */,
 				88F968D129178FC100552312 /* MidiKit.entitlements */,
+				88F968E22917E87700552312 /* Sounds */,
 				88F968CE29178FC100552312 /* Preview Content */,
 			);
 			path = MidiKit;
@@ -85,6 +96,9 @@
 			dependencies = (
 			);
 			name = MidiKit;
+			packageProductDependencies = (
+				88F968DA2917971900552312 /* AudioKit */,
+			);
 			productName = MidiKit;
 			productReference = 88F968C529178FBF00552312 /* MidiKit.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +127,9 @@
 				Base,
 			);
 			mainGroup = 88F968BC29178FBF00552312;
+			packageReferences = (
+				88F968D92917971900552312 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 88F968C629178FBF00552312 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F968E32917E87700552312 /* Sounds in Resources */,
 				88F968D029178FC100552312 /* Preview Assets.xcassets in Resources */,
 				88F968CD29178FC100552312 /* Assets.xcassets in Resources */,
 			);
@@ -141,6 +159,8 @@
 			files = (
 				88F968CB29178FBF00552312 /* ContentView.swift in Sources */,
 				88F968C929178FBF00552312 /* MidiKitApp.swift in Sources */,
+				88F968E12917E0CC00552312 /* InstrumentsEXS+MIDI.swift in Sources */,
+				88F968DF2917DFCA00552312 /* MIDIConductor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88F968D92917971900552312 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88F968DA2917971900552312 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88F968D92917971900552312 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88F968BD29178FBF00552312 /* Project object */;
 }
